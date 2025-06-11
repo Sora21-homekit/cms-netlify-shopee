@@ -6,9 +6,10 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "sync": "node sync-artikel-to-firestore.js"    
+    "sync": "node sync-artikel-to-firestore.js"
   },
   "dependencies": {
+    "dotenv": "^16.5.0",
     "firebase": "^11.9.0",
     "firebase-admin": "^13.4.0",
     "gray-matter": "^4.0.3",

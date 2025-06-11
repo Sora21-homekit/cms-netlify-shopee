@@ -1,0 +1,10 @@
+serviceAccountKey.json
+# Ignore environment config
+.env
+
+# Ignore node_modules
+node_modules/
+
+# Ignore build/dist folder (jika pakai bundler)
+dist/
+build/

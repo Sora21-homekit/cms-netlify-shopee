@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Produk A",
+    "slug": "produk-a",
+    "thumbnail": "/uploads/produk-a.jpg",
+    "body": "Deskripsi singkat produk A",
+    "link": "https://shopee.co.id/produk-a"
+  },
+  {
+    "title": "Produk B",
+    "slug": "produk-b",
+    "thumbnail": "/uploads/produk-b.jpg",
+    "body": "Deskripsi singkat produk B",
+    "link": "https://shopee.co.id/produk-b"
+  }
+]

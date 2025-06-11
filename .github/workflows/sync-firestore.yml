@@ -1,0 +1,30 @@
+name: Sync Artikel to Firestore
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'content/artikel/**'
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Copy Firestore Credentials
+        env:
+          FIREBASE_KEY: ${{ secrets.FIREBASE_KEY }}
+        run: echo "$FIREBASE_KEY" > serviceAccountKey.json
+
+      - name: Sync to Firestore
+        run: npm run sync

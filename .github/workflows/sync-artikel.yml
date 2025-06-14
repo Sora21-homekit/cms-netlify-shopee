@@ -21,9 +21,13 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Tulis FIREBASE_KEY ke file
-        run: |
-          echo "${{ secrets.FIREBASE_KEY }}" > serviceAccountKey.json
-
       - name: Jalankan sinkronisasi
         run: npm run sync
+        env:
+          FIREBASE_KEY: ${{ secrets.FIREBASE_KEY }}
+
+      - name: Debug FIREBASE_KEY
+        run: echo "KEY LENGTH: ${#FIREBASE_KEY}"
+        env:
+          FIREBASE_KEY: ${{ secrets.FIREBASE_KEY }}
+
